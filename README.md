@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# Tenzie Game 🎲
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun dice game built with **React** and **TypeScript**. Roll the dice until all of them show the same number!
 
-Currently, two official plugins are available:
+## 🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Interactive gameplay**: Click to hold dice and prevent them from rolling.
+- **Win detection**: Automatically identifies when all dice match.
+- **Accessible**: Screen reader-friendly with `aria` attributes.
 
-## Expanding the ESLint configuration
+## 🛠️ Built With
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React** + **TypeScript**
+- **nanoid**: for unique dice IDs
+- **Tailwind CSS**: for styling
 
-- Configure the top-level `parserOptions` property like this:
+## 📦 Installation and Setup
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. Clone the repository:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+   ```bash
+   git clone https://github.com/ORomero227/TenzieGame.git
+   cd TenzieGame
+   ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+2. Install Dependencies
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   npm install
+   ```
+
+3. Start the development server
+
+   ```bash
+   npm run dev
+   ```
+
+## 💻 Usage
+
+1. Open the app in your browser.  
+2. Roll the dice by clicking the **Roll** button.  
+3. Click on individual dice to **hold** their value, preventing them from rolling again.  
+4. Continue rolling until all dice show the same number.  
+5. When all dice match, you win! 🎉  
+6. Click **New Game** to reset and play again.
